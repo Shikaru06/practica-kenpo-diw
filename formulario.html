@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Kenpo Dojo</title>
+  </head>
+  <body>
+    <header>
+      <div class="contenedor">
+        <div class="header-flex">
+          <div class="logo">
+            🥋 KENPO <span>DOJO</span>
+          </div>
+
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="index.html#programas">Programas</a></li>
+              <li><a href="formulario.html" class="activo">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <button class="btn-movil" id="btn-movil">☰</button>
+        </div>
+
+        <div class="menu-movil" id="menu-movil">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#programas">Programas</a>
+          <a href="formulario.html">Contacto</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="contenedor">
+        <div class="form-contenedor">
+          <h1>Solicita tu Clase de Prueba Gratuita</h1>
+          <p class="intro">
+            Rellena tus datos y te responderemos en menos de 24 horas.
+          </p>
+
+          <form action="#" method="POST">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Tu nombre y apellidos"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="tuemail@ejemplo.com"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="600 000 000"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="programa">Programa de interés</label>
+              <select id="programa" name="programa" required>
+                <option value="" disabled selected>Selecciona una clase</option>
+                <option value="infantil">Kenpo Infantil (5 a 12 años)</option>
+                <option value="adultos">Defensa Personal Adultos (+13 años)</option>
+                <option value="avanzado">Grados y Competición</option>
+              </select>
+            </div>
+
+            <div class="campo">
+              <label for="mensaje">Mensaje</label>
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Dudas, horarios o experiencia previa..."
+              ></textarea>
+            </div>
+
+            <div class="check">
+              <input type="checkbox" id="privacidad" name="privacidad" required />
+              <label for="privacidad">Acepto la política de privacidad</label>
+            </div>
+
+            <button type="submit" class="btn-rojo btn-full">
+              Enviar Solicitud
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="contenedor">
+        <div class="footer-flex">
+          <p>© 2026 Kenpo Dojo. Práctica 3.1 DIW (S2DAW) - Fernando Ortega</p>
+          <div class="enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="#programas">Programas</a>
+            <a href="formulario.html">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
