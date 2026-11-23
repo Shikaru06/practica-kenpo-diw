@@ -1,0 +1,174 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.contenedor {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: v.$negro;
+  color: v.$blanco;
+  padding: 15px 0;
+
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+
+      span {
+        color: v.$rojo;
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        li {
+          a {
+            color: #cccccc;
+
+            &:hover,
+            &.activo {
+              color: v.$blanco;
+            }
+          }
+        }
+      }
+    }
+
+    .btn-movil {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  }
+
+  .menu-movil {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+
+    &.activo {
+      display: flex;
+    }
+
+    a {
+      color: white;
+      padding: 5px 0;
+    }
+  }
+
+  @include m.respond-to("movil") {
+    .header-flex {
+      nav {
+        display: none;
+      }
+      .btn-movil {
+        display: block;
+      }
+    }
+  }
+}
+
+.hero {
+  background-color: #1f1f1f;
+  color: v.$blanco;
+  padding: 60px 0;
+  text-align: center;
+
+  .subtitulo {
+    color: v.$rojo;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+  }
+
+  @include m.respond-to("movil") {
+    padding: 40px 0;
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+.seccion-programas {
+  padding: 50px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+
+  .texto-intro {
+    color: v.$gris;
+    margin-bottom: 30px;
+  }
+
+  .grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @include m.respond-to("tablet") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m.respond-to("movil") {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+footer {
+  background-color: v.$negro;
+  color: #888888;
+  padding: 25px 0;
+  margin-top: 50px;
+  text-align: center;
+
+  .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include m.respond-to("movil") {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .enlaces {
+      display: flex;
+      gap: 15px;
+
+      a:hover {
+        color: white;
+      }
+    }
+  }
+}

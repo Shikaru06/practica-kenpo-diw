@@ -1,0 +1,111 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+.btn-rojo {
+  @include m.boton(v.$rojo, v.$blanco);
+}
+
+.btn-negro {
+  @include m.boton(v.$negro, v.$blanco);
+  border: 1px solid #444444;
+}
+
+.btn-full {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.tarjeta {
+  background-color: v.$blanco;
+  border: 1px solid v.$borde;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+
+  .categoria {
+    color: v.$rojo;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin: 10px 0;
+  }
+
+  p {
+    color: v.$gris;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    font-size: 14px;
+  }
+}
+
+.form-contenedor {
+  max-width: 520px;
+  margin: 40px auto;
+  background: v.$blanco;
+  border: 1px solid v.$borde;
+  border-radius: 6px;
+  padding: 30px;
+
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .intro {
+    text-align: center;
+    color: v.$gris;
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .campo {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid v.$borde;
+      border-radius: 4px;
+      font-size: 14px;
+      font-family: inherit;
+
+      &:focus {
+        outline: none;
+        border-color: v.$rojo;
+      }
+    }
+
+    textarea {
+      height: 80px;
+      resize: none;
+    }
+  }
+
+  .check {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: v.$gris;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  @include m.respond-to("movil") {
+    padding: 20px;
+  }
+}
