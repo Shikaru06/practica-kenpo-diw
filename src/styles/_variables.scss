@@ -1,0 +1,15 @@
+$negro: #111111;
+$rojo: #d32f2f;
+$gris-fondo: #f8f9fa;
+$blanco: #ffffff;
+$texto: #222222;
+$gris: #666666;
+$borde: #dddddd;
+
+$fuente: "Inter", sans-serif;
+
+// Medidas para las pantallas en movil y tablet
+$breakpoints: (
+  "movil": 600px,
+  "tablet": 900px,
+);

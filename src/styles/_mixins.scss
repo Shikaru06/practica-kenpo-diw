@@ -1,0 +1,30 @@
+@use "sass:map";
+@use "variables" as v;
+
+// Mixin para los botones
+@mixin boton($fondo, $texto) {
+  background-color: $fondo;
+  color: $texto;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Para no andar escribiendo @media a mano en cada sitio
+@mixin respond-to($pantalla) {
+  $ancho: map.get(v.$breakpoints, $pantalla);
+
+  @media (max-width: $ancho) {
+    @content;
+  }
+}
