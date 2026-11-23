@@ -1,5 +1,5 @@
-@use "variables" as v;
-@use "mixins" as m;
+@use "variables" as *;
+@use "mixins" as *;
 
 .contenedor {
   width: 90%;
@@ -8,8 +8,8 @@
 }
 
 header {
-  background-color: v.$negro;
-  color: v.$blanco;
+  background-color: $negro;
+  color: $blanco;
   padding: 15px 0;
 
   .header-flex {
@@ -22,7 +22,7 @@ header {
       font-weight: bold;
 
       span {
-        color: v.$rojo;
+        color: $rojo;
       }
     }
 
@@ -38,7 +38,7 @@ header {
 
             &:hover,
             &.activo {
-              color: v.$blanco;
+              color: #ffffff;
             }
           }
         }
@@ -71,7 +71,7 @@ header {
     }
   }
 
-  @include m.respond-to("movil") {
+  @include respond-to("movil") {
     .header-flex {
       nav {
         display: none;
@@ -85,12 +85,12 @@ header {
 
 .hero {
   background-color: #1f1f1f;
-  color: v.$blanco;
+  color: $blanco;
   padding: 60px 0;
   text-align: center;
 
   .subtitulo {
-    color: v.$rojo;
+    color: $rojo;
     font-weight: bold;
     font-size: 13px;
     margin-bottom: 10px;
@@ -107,7 +107,7 @@ header {
     margin: 0 auto 25px auto;
   }
 
-  @include m.respond-to("movil") {
+  @include respond-to("movil") {
     padding: 40px 0;
 
     h1 {
@@ -126,7 +126,7 @@ header {
   }
 
   .texto-intro {
-    color: v.$gris;
+    color: $gris;
     margin-bottom: 30px;
   }
 
@@ -135,18 +135,18 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
-    @include m.respond-to("tablet") {
+    @include respond-to("tablet") {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include m.respond-to("movil") {
+    @include respond-to("movil") {
       grid-template-columns: 1fr;
     }
   }
 }
 
 footer {
-  background-color: v.$negro;
+  background-color: $negro;
   color: #888888;
   padding: 25px 0;
   margin-top: 50px;
@@ -157,7 +157,7 @@ footer {
     justify-content: space-between;
     align-items: center;
 
-    @include m.respond-to("movil") {
+    @include respond-to("movil") {
       flex-direction: column;
       gap: 15px;
     }

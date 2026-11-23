@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "variables" as *;
 
 * {
   margin: 0;
@@ -7,9 +7,9 @@
 }
 
 body {
-  font-family: v.$fuente;
-  background-color: v.$gris-fondo;
-  color: v.$texto;
+  font-family: $fuente;
+  background-color: $gris-fondo;
+  color: $texto;
   line-height: 1.6;
 }
 
