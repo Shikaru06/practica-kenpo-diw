@@ -35,6 +35,4 @@ Este proyecto consiste en la maquetación web responsive de dos páginas (**Land
 
 ## 🌐 Despliegue en GitHub Pages
 
-El proyecto ya está configurado con:
-- `base: './'` en `vite.config.js` para asegurar que las rutas relativas funcionen sin errores en GitHub Pages.
-- `outDir: 'docs'` para que baste con ir a los **Settings > Pages** del repositorio en GitHub, seleccionar la rama `main` y la carpeta `/docs`.
+https://shikaru06.github.io/practica-kenpo-diw/index.html
