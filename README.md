@@ -1,38 +1,46 @@
-## 🥋 Resumen del Proyecto
+# Práctica 3.1: Maquetación Responsive con SASS y Vite
 
-Este proyecto consiste en la maquetación web responsive de dos páginas (**Landing Page** y **Formulario de Contacto**) diseñadas previamente en **Figma** y desarrolladas utilizando **Vite** y **SASS moderno**.
-
-- **Figma Design:** Prototipo con rejilla de 12 columnas en escritorio y 4 columnas en móvil.
-- **HTML Semántico:** Uso exhaustivo de etiquetas semánticas (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<form>`, `<footer>`).
-- **SASS Modular:** Arquitectura de estilos dividida en parciales mediante la directiva `@use`.
-
----
-
-## 📁 Estructura del Proyecto
-
-```text
-├── docs/                       
-│   ├── index.html
-│   ├── formulario.html
-│   └── assets/
-├── src/
-│   ├── assets/                  
-│   ├── styles/
-│   │   ├── _variables.scss      # Colores, tipografías y mapa de breakpoints
-│   │   ├── _mixins.scss        
-│   │   ├── _globals.scss        
-│   │   ├── _layout.scss         # Estructura
-│   │   ├── _components.scss     # Botones, tarjetas interactivas y formulario
-│   │   └── main.scss           
-│   └── main.js                 
-├── index.html                   # Página 1: Landing Page
-├── formulario.html              # Página 2: Formulario de Contacto
-├── package.json
-└── vite.config.js               # Configuración multi-página y salida a docs/
-```
+- **Asignatura:** Diseño de Interfaces Web (DIW) - 2º DAW
+- **Autor:** Fernando Ortega Lomelí
+- **Repositorio en GitHub:** [https://github.com/Shikaru06/practica-kenpo-diw](https://github.com/Shikaru06/practica-kenpo-diw)
+- **Página desplegada en GitHub Pages:** [https://shikaru06.github.io/practica-kenpo-diw/](https://shikaru06.github.io/practica-kenpo-diw/)
+- **Prototipo en Figma:** [https://www.figma.com/design/ODSs9L9ICIIdQ3lodIRxbN](https://www.figma.com/design/ODSs9L9ICIIdQ3lodIRxbN)
 
 ---
 
-## 🌐 Despliegue en GitHub Pages
+## Descripción de la Práctica
 
-https://shikaru06.github.io/practica-kenpo-diw/index.html
+Maquetación web responsive de dos páginas (**Landing Page** y **Formulario de Contacto**) para la escuela de artes marciales "Kenpo Dojo", realizada a partir del diseño previo en **Figma** y desarrollada con **Vite** y **SASS**.
+
+### Características principales:
+- **Prototipo en Figma:** Diseñado con sistema de rejilla de 12 columnas en escritorio y 4 columnas en móvil, definiendo variables de color y tipografía.
+- **HTML Semántico:** Uso de etiquetas estructurales (`<header>`, `<nav>`, `<main>`, `<section>`, `<form>`, `<label>`, `<footer>`).
+- **SASS Modular:** Estructurado en parciales (`_variables.scss`, `_mixins.scss`, `_globals.scss`, `_layout.scss`, `_components.scss` y `main.scss`) usando la directiva `@use`.
+- **Responsive:** Gestión de media queries mediante un mapa SASS de breakpoints y un mixin reutilizable, pasando de 3 columnas en escritorio a 1 columna apilada en pantallas móviles con menú desplegable.
+- **Formulario:** Página de contacto accesible con validación básica de campos y diseño adaptable.
+
+---
+
+## Instrucciones de Ejecución
+
+Para probar el proyecto en local:
+
+1. **Instalar dependencias** (necesita Node.js):
+   ```bash
+   npm install
+   ```
+
+2. **Arrancar el servidor de desarrollo local:**
+   ```bash
+   npm run dev
+   ```
+
+3. **Compilar para producción (genera la carpeta `docs/` para GitHub Pages):**
+   ```bash
+   npm run build
+   ```
+
+4. **Previsualizar la versión de producción:**
+   ```bash
+   npm run preview
+   ```
